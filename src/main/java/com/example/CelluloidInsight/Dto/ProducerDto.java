@@ -14,4 +14,3 @@ public class ProducerDto {
     private String movieId;
     private Double rating;
 }
-
