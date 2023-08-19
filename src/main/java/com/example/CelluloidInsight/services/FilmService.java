@@ -30,4 +30,7 @@ public class FilmService {
         Query query = Query.query(Criteria.where("id").is(movieId));
         return mongoTemplate.exists(query, Film.class);
     }
+    public Film createFilm(Film film){
+        return filmRepository.save(film);
+    }
 }

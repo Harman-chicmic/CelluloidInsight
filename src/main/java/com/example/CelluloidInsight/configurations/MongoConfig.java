@@ -13,7 +13,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 public class MongoConfig {
     @Bean
     public MongoClient mongoClient() {
-        ConnectionString connectionString = new ConnectionString("mongodb://192.180.2.132:27023/todo-List");
+        ConnectionString connectionString = new ConnectionString("mongodb://localhost:27023/movieDB");
         MongoClientSettings mongoClientSettings = MongoClientSettings.builder()
                 .applyConnectionString(connectionString)
                 .build();
@@ -23,7 +23,7 @@ public class MongoConfig {
 
     @Bean
     public MongoTemplate mongoTemplate() throws Exception {
-        return new MongoTemplate(mongoClient(), "todo-List");
+        return new MongoTemplate(mongoClient(), "movieDB");
     }
 }
 
