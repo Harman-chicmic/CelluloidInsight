@@ -3,10 +3,8 @@ package com.example.CelluloidInsight.controllers;
 import com.example.CelluloidInsight.documents.Film;
 import com.example.CelluloidInsight.services.FilmService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,6 +17,4 @@ public class FilmController {
     public List<Film> showAll(){
         return filmService.returnAll();
     }
-//    @PostMapping("/")
-
 }

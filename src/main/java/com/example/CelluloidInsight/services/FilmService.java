@@ -19,6 +19,9 @@ public class FilmService {
     public List<Film> returnAll(){
         return mongoTemplate.find(Query.query(new Criteria()), Film.class);
     }
+
+    public Film save(Film film){ return filmRepository.save(film);}
+
     public Film getFilmById(String movieId){
         Query query = Query.query(Criteria.where("id").is(movieId));
         if(mongoTemplate.exists(query, Film.class)){

@@ -6,14 +6,13 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document("films")
+import java.util.List;
+
+@Document("watchlist")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class Film {
-    @Id
-    private String id;
-    private String name;
-    private long numberOfRatings;
-    private double rating;
+@AllArgsConstructor
+public class UserWatchlist {
+    @Id Integer userId;
+    List<String> movieIds;
 }

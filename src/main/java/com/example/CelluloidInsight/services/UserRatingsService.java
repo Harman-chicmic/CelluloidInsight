@@ -2,8 +2,10 @@ package com.example.CelluloidInsight.services;
 
 import com.example.CelluloidInsight.Dto.MovieRating;
 import com.example.CelluloidInsight.documents.UserRatings;
+import com.example.CelluloidInsight.documents.UserWatchlist;
 import com.example.CelluloidInsight.repositories.FilmRepository;
 import com.example.CelluloidInsight.repositories.UserRatingsRepository;
+import com.example.CelluloidInsight.repositories.UserWatchlistRepository;
 import com.mongodb.client.result.UpdateResult;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.mongodb.core.MongoTemplate;

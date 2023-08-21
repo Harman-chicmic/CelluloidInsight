@@ -27,9 +27,9 @@ public class ProducerService {
     private KafkaTemplate<Integer,ProducerDto> kafkaTemplate;
 
     @Value("${kafka.topic-create}")
-    private final String TOPIC_CREATE;
+    private String TOPIC_CREATE;
     @Value("${kafka.topic-update}")
-    private final String TOPIC_UPDATE;
+    private String TOPIC_UPDATE;
 
     @Bean
     public ObjectMapper objectMapper(){
